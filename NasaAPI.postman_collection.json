@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "2a7e51b3-145a-4b26-907f-3888f51477e1",
+		"name": "NasaAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obter Dados Mars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key={{apikey}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"mars-photos",
+						"api",
+						"v1",
+						"rovers",
+						"curiosity",
+						"photos"
+					],
+					"query": [
+						{
+							"key": "sol",
+							"value": "1000"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "api_key",
+							"value": "{{apikey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DadosFotoNasa url específica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_foto}}",
+					"host": [
+						"{{url_foto}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
